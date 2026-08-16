@@ -46,13 +46,14 @@ User-facing explanation + audit log
 
 This is a **curated public showcase** of the V3 work rather than the private production repository.
 
-- `DESIGN.md` — product and design-system specification
-- `docs/DECISION-CONTRACT.md` — behavioral contract for intent, authority, execution, and UI semantics
-- `docs/DECISION-CONTRACT-VERIFICATION.md` — R1–R8 verification used to reconcile the earlier engine with V3
-- `docs/ARCHITECTURE-DECISIONS.md` — selected architectural decisions and tradeoffs
-- `docs/V2-TO-V3.md` — concise evolution from functional prototype to spec-driven implementation
-- `src/decisionEngine.ts` — selected deterministic decision-engine implementation
-- `src/types.ts` — V3 decision-contract types
+- [`CLAUDE.md`](CLAUDE.md) — V3 build governance, source-of-truth hierarchy, implementation guardrails, and definition of done
+- [`DESIGN.md`](DESIGN.md) — product and design-system specification
+- [`AGENTIC-COMMERCE.md`](AGENTIC-COMMERCE.md) — implemented commerce APIs plus evaluated agentic-commerce protocols and roadmap
+- [`docs/DECISION-CONTRACT.md`](docs/DECISION-CONTRACT.md) — behavioral contract for intent, authority, execution, and UI semantics
+- [`docs/DECISION-CONTRACT-VERIFICATION.md`](docs/DECISION-CONTRACT-VERIFICATION.md) — R1–R8 verification used to reconcile the earlier engine with V3
+- [`docs/adr/`](docs/adr/) — 12 Architecture Decision Records covering product, agent, commerce, data, and implementation choices
+- [`src/decisionEngine.ts`](src/decisionEngine.ts) — selected deterministic decision-engine implementation
+- [`src/types.ts`](src/types.ts) — V3 decision-contract types
 
 ## Decision model
 
