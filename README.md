@@ -13,6 +13,28 @@ V3 evolves the project from a functional prototype into a **spec-driven, auditab
 - **Product evolution — V0 → V4:** https://www.figma.com/design/mG0JTDjA5yWNqYqDaLccK0
 - **AI Use Case Canvas:** https://www.figma.com/board/U4CCYRRJHLw1FIAuanZOPM
 
+## For hiring teams — 2-minute tour
+
+If you are reviewing this as evidence of product-design and AI-systems work, start here:
+
+1. **Understand the behavior model:** [`docs/DECISION-CONTRACT.md`](docs/DECISION-CONTRACT.md)
+2. **See how rules were verified:** [`docs/DECISION-CONTRACT-VERIFICATION.md`](docs/DECISION-CONTRACT-VERIFICATION.md)
+3. **Review product and design-system decisions:** [`DESIGN.md`](DESIGN.md)
+4. **Review architecture tradeoffs:** [`docs/adr/`](docs/adr/)
+5. **Inspect representative implementation:** [`src/decisionEngine.ts`](src/decisionEngine.ts) and [`src/types.ts`](src/types.ts)
+6. **See how the build is governed for human/AI contributors:** [`CLAUDE.md`](CLAUDE.md)
+
+### What this repository demonstrates
+
+- designing **bounded autonomy** rather than unrestricted agent action
+- separating **recommendation, authority, execution, and outcome**
+- translating product policy into deterministic system behavior
+- designing for ambiguity, failure states, substitutions, ceilings, and hard stops
+- documenting architecture decisions so future engineers or agents can work safely
+- connecting product design to implementation, verification, and auditability
+
+The full production repository remains private. This public repository intentionally exposes the design reasoning, system model, representative implementation, and verification artifacts that are useful for review without publishing credentials or infrastructure-sensitive details.
+
 ## V3 system model
 
 ```text
