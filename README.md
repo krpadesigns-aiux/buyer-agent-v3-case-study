@@ -13,6 +13,10 @@ V3 evolves the project from a functional prototype into a **spec-driven, auditab
 - **Product evolution — V0 → V4:** https://www.figma.com/design/mG0JTDjA5yWNqYqDaLccK0
 - **AI Use Case Canvas:** https://www.figma.com/board/U4CCYRRJHLw1FIAuanZOPM
 
+## AI-native build evidence
+
+Start with [what AI did, what I decided, and what is independently verifiable](docs/AI-NATIVE-EVIDENCE.md). Model interpretation evaluations and a runnable public test suite are **planned, not completed**.
+
 ## For hiring teams — 2-minute tour
 
 If you are reviewing this as evidence of product-design and AI-systems work, start here:
