@@ -1,12 +1,12 @@
 # Buyer’s Agent → Langfuse → Trace Intel: observability contract
 
-**Status (2026-11-22): proposed integration contract, not a completed Langfuse ingestion or Trace Intel integration.**
+**Status (2026-11-22): Langfuse OTLP transport and Observations API v2 readback verified with one synthetic connectivity SPAN; actual Buyer Agent model/policy tracing remains unverified.**
 
 ## Current evidence boundary
 
 Forty-four local Ollama model calls generated synthetic JSONL test outputs. They are reproducible offline results, but they currently have **no verified Langfuse trace IDs**. Do not present a JSONL row as a hosted trace.
 
-Trace Intel V3's inspected Next.js route uses the older Langfuse GET /api/public/traces read endpoint. The current Langfuse Observations API v2 is recommended for fresh OpenTelemetry traces. The legacy POST /api/public/ingestion endpoint stopped accepting trace/span events on Langfuse Cloud as of November 16, 2026. New event ingestion must use an OpenTelemetry-based SDK/exporter.
+Trace Intel V3's pre-existing trace-list route uses the retired Langfuse GET /api/public/traces endpoint; in this evaluation a **new local read-only route** was implemented for a verified traceId using Observations API v2, while the legacy list view still needs migration. The current Langfuse Observations API v2 is recommended for fresh OpenTelemetry traces. The legacy POST /api/public/ingestion endpoint stopped accepting trace/span events on Langfuse Cloud as of November 16, 2026. New event ingestion must use an OpenTelemetry-based SDK/exporter.
 
 Documentation: https://langfuse.com/docs/observability/sdk/overview and https://langfuse.com/docs/api-and-data-platform/features/public-api
 
@@ -45,9 +45,16 @@ Documentation: https://langfuse.com/docs/observability/sdk/overview and https://
 5. Investigate a measured failure (for example, the return-vs-buy interpretation error) in Trace Intel. Record the trace ID, failing span, cause hypothesis, fixed prompt/code version, and retest trace.
 6. Export only scrubbed fixtures and derived scores to the public case-study repository. No household identities, authorization tokens, raw billing records, Stripe secrets, or real addresses.
 
+## Verified telemetry transport (not model tracing)
+
+- **Langfuse Cloud US** accepted one synthetic-only OTLP span with HTTP 200 on `POST /api/public/otel/v1/traces`, header `x-langfuse-ingestion-version: 4`.
+- **Observations API v2 readback verified the same real cloud observation**: trace `1507dab2977fbb06291e66bf5d7f01a4`, observation `7af7eb3284b5cb75`, named `buyer_agent.synthetic_otel_connectivity_check`, type `SPAN`. No model was called, and no user data, merchant or payment interaction occurred.
+- Local Trace Intel `/evals/buyer-agent` now links to this API-verified **transport-only** observation, separately from the 44 saved Replit V2 model actions. Local `GET /api/langfuse/health` migrated to Observations API v2. The temporary probe POST route was removed afterward.
+- **This is not evidence that actual model or purchasing steps have been instrumented.**
+
 ## Not yet verified
 
-- No live Langfuse trace was written or retrieved in this evaluation.
+- Actual **V2 or V4 model generation** span in Langfuse, including latency, prompt/schema version and requested/resolved model identity.
 - Trace Intel has not been demonstrated displaying Buyer Agent case traces.
 - The configured private Buyer Agent model has not been evaluated here.
 - This document cannot be used to claim integrated end-to-end observability.
