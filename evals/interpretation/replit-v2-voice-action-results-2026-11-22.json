@@ -1,0 +1,446 @@
+{
+  "source": "Replit Agent direct development /api/ai/intent evaluation; values transcribed from returned compact tool report; not direct HTTP capture by ChatGPT",
+  "app": "Buyer Agent",
+  "replit_url": "https://replit.com/@krpadesigns/Buyer-Agent",
+  "branch": "V2",
+  "commit": "2013556b7efa4f275751b35f2de7a7fa2ce9f199",
+  "configured_model": "gpt-5.6-luna",
+  "actual_serving_revision": "unverified",
+  "dataset_sha256": "a8e98e2835318426c5f85913183ddcfa40f25ee60da29677fe5f20f6384c1024",
+  "dataset_version": "2026-11-22-v1",
+  "timestamp": "2026-11-22T16:48:42.484Z",
+  "run_duration_seconds": 70.881,
+  "method": "Synthetic transcript per case and empty context to development /api/ai/intent, sequential, no UI handlers; no merchant or payment",
+  "http_errors": 0,
+  "parse_errors": 0,
+  "invalid_actions": 0,
+  "action_counts": {
+    "add_item": 17,
+    "remove_item": 7,
+    "none": 19,
+    "dismiss_all": 1
+  },
+  "nonstring_params_cases": [
+    "N16",
+    "C01",
+    "C02",
+    "C03",
+    "C04",
+    "C05",
+    "C06",
+    "C07",
+    "C08",
+    "C10",
+    "C11",
+    "C12"
+  ],
+  "per_case": [
+    {
+      "case_id": "N01",
+      "http_status": 200,
+      "parse_ok": true,
+      "action": "none",
+      "params": {}
+    },
+    {
+      "case_id": "N02",
+      "http_status": 200,
+      "parse_ok": true,
+      "action": "remove_item",
+      "params": {
+        "itemName": "milk"
+      }
+    },
+    {
+      "case_id": "N03",
+      "http_status": 200,
+      "parse_ok": true,
+      "action": "remove_item",
+      "params": {
+        "itemName": "milk"
+      }
+    },
+    {
+      "case_id": "N04",
+      "http_status": 200,
+      "parse_ok": true,
+      "action": "remove_item",
+      "params": {
+        "itemName": "milk"
+      }
+    },
+    {
+      "case_id": "N05",
+      "http_status": 200,
+      "parse_ok": true,
+      "action": "none",
+      "params": {}
+    },
+    {
+      "case_id": "N06",
+      "http_status": 200,
+      "parse_ok": true,
+      "action": "none",
+      "params": {}
+    },
+    {
+      "case_id": "N07",
+      "http_status": 200,
+      "parse_ok": true,
+      "action": "none",
+      "params": {
+        "itemName": "oat milk"
+      }
+    },
+    {
+      "case_id": "N08",
+      "http_status": 200,
+      "parse_ok": true,
+      "action": "none",
+      "params": {}
+    },
+    {
+      "case_id": "N09",
+      "http_status": 200,
+      "parse_ok": true,
+      "action": "none",
+      "params": {}
+    },
+    {
+      "case_id": "N10",
+      "http_status": 200,
+      "parse_ok": true,
+      "action": "dismiss_all",
+      "params": {
+        "itemName": "paper towels"
+      }
+    },
+    {
+      "case_id": "N11",
+      "http_status": 200,
+      "parse_ok": true,
+      "action": "remove_item",
+      "params": {
+        "itemName": "bananas"
+      }
+    },
+    {
+      "case_id": "N12",
+      "http_status": 200,
+      "parse_ok": true,
+      "action": "remove_item",
+      "params": {
+        "itemName": "kitchen sponges"
+      }
+    },
+    {
+      "case_id": "N13",
+      "http_status": 200,
+      "parse_ok": true,
+      "action": "none",
+      "params": {}
+    },
+    {
+      "case_id": "N14",
+      "http_status": 200,
+      "parse_ok": true,
+      "action": "remove_item",
+      "params": {
+        "itemName": "spoiled milk"
+      }
+    },
+    {
+      "case_id": "N15",
+      "http_status": 200,
+      "parse_ok": true,
+      "action": "remove_item",
+      "params": {
+        "itemName": "almond milk"
+      }
+    },
+    {
+      "case_id": "N16",
+      "http_status": 200,
+      "parse_ok": true,
+      "action": "none",
+      "params": {
+        "itemName": "paper towels",
+        "quantity": 6
+      }
+    },
+    {
+      "case_id": "P01",
+      "http_status": 200,
+      "parse_ok": true,
+      "action": "add_item",
+      "params": {
+        "itemName": "Fairlife"
+      }
+    },
+    {
+      "case_id": "P02",
+      "http_status": 200,
+      "parse_ok": true,
+      "action": "none",
+      "params": {}
+    },
+    {
+      "case_id": "P03",
+      "http_status": 200,
+      "parse_ok": true,
+      "action": "add_item",
+      "params": {
+        "itemName": "Fairlife milk",
+        "list": "next week's list"
+      }
+    },
+    {
+      "case_id": "P04",
+      "http_status": 200,
+      "parse_ok": true,
+      "action": "none",
+      "params": {}
+    },
+    {
+      "case_id": "P05",
+      "http_status": 200,
+      "parse_ok": true,
+      "action": "add_item",
+      "params": {
+        "itemName": "paper towels"
+      }
+    },
+    {
+      "case_id": "P06",
+      "http_status": 200,
+      "parse_ok": true,
+      "action": "none",
+      "params": {}
+    },
+    {
+      "case_id": "P07",
+      "http_status": 200,
+      "parse_ok": true,
+      "action": "none",
+      "params": {}
+    },
+    {
+      "case_id": "P08",
+      "http_status": 200,
+      "parse_ok": true,
+      "action": "none",
+      "params": {}
+    },
+    {
+      "case_id": "P09",
+      "http_status": 200,
+      "parse_ok": true,
+      "action": "none",
+      "params": {}
+    },
+    {
+      "case_id": "P10",
+      "http_status": 200,
+      "parse_ok": true,
+      "action": "none",
+      "params": {}
+    },
+    {
+      "case_id": "P11",
+      "http_status": 200,
+      "parse_ok": true,
+      "action": "none",
+      "params": {}
+    },
+    {
+      "case_id": "P12",
+      "http_status": 200,
+      "parse_ok": true,
+      "action": "none",
+      "params": {
+        "itemName": "butter"
+      }
+    },
+    {
+      "case_id": "C01",
+      "http_status": 200,
+      "parse_ok": true,
+      "action": "add_item",
+      "params": {
+        "itemName": "Fairlife lactose-free 2% milk",
+        "quantity": 1,
+        "size": "52 oz",
+        "allowSubstitutions": false
+      }
+    },
+    {
+      "case_id": "C02",
+      "http_status": 200,
+      "parse_ok": true,
+      "action": "add_item",
+      "params": {
+        "itemName": "Fairlife lactose-free 2% milk",
+        "quantity": 2
+      }
+    },
+    {
+      "case_id": "C03",
+      "http_status": 200,
+      "parse_ok": true,
+      "action": "add_item",
+      "params": {
+        "itemName": "unsweetened oat milk",
+        "quantity": 1,
+        "exclude": "dairy milk"
+      }
+    },
+    {
+      "case_id": "C04",
+      "http_status": 200,
+      "parse_ok": true,
+      "action": "add_item",
+      "params": {
+        "itemName": "kitchen sponge",
+        "quantity": 3,
+        "packaging": "individual",
+        "exclude": "multipacks or different products"
+      }
+    },
+    {
+      "case_id": "C05",
+      "http_status": 200,
+      "parse_ok": true,
+      "action": "add_item",
+      "params": {
+        "itemName": "paper towels",
+        "quantity": 2
+      }
+    },
+    {
+      "case_id": "C06",
+      "http_status": 200,
+      "parse_ok": true,
+      "action": "add_item",
+      "params": {
+        "itemName": "large eggs",
+        "quantity": 12,
+        "unit": "eggs",
+        "substitutionPreference": "no other pack sizes"
+      }
+    },
+    {
+      "case_id": "C07",
+      "http_status": 200,
+      "parse_ok": true,
+      "action": "add_item",
+      "params": {
+        "itemName": "bananas",
+        "quantity": 6,
+        "unit": "individual"
+      }
+    },
+    {
+      "case_id": "C08",
+      "http_status": 200,
+      "parse_ok": true,
+      "action": "add_item",
+      "params": {
+        "itemName": "regular 2% cow milk",
+        "quantity": 1,
+        "unit": "gallon",
+        "exclude": "Fairlife lactose-free"
+      }
+    },
+    {
+      "case_id": "C09",
+      "http_status": 200,
+      "parse_ok": true,
+      "action": "add_item",
+      "params": {
+        "itemName": "Fairlife lactose-free 2% milk",
+        "ifOutOfStock": "ask_before_substituting",
+        "substitute": "do_not_buy_regular_milk"
+      }
+    },
+    {
+      "case_id": "C10",
+      "http_status": 200,
+      "parse_ok": true,
+      "action": "add_item",
+      "params": {
+        "itemName": "Fairlife lactose-free 2% milk",
+        "quantity": 2,
+        "size": "52-ounce carton",
+        "exclude": [
+          "almond milk",
+          "oat milk"
+        ]
+      }
+    },
+    {
+      "case_id": "C11",
+      "http_status": 200,
+      "parse_ok": true,
+      "action": "add_item",
+      "params": {
+        "itemName": "kitchen sponge",
+        "quantity": 1,
+        "exclude": "paper towels"
+      }
+    },
+    {
+      "case_id": "C12",
+      "http_status": 200,
+      "parse_ok": true,
+      "action": "add_item",
+      "params": {
+        "itemName": "unsweetened almond milk",
+        "quantity": 1,
+        "exclude": [
+          "oat milk",
+          "dairy"
+        ]
+      }
+    },
+    {
+      "case_id": "A01",
+      "http_status": 200,
+      "parse_ok": true,
+      "action": "add_item",
+      "params": {
+        "itemName": "milk"
+      }
+    },
+    {
+      "case_id": "A02",
+      "http_status": 200,
+      "parse_ok": true,
+      "action": "none",
+      "params": {}
+    },
+    {
+      "case_id": "A03",
+      "http_status": 200,
+      "parse_ok": true,
+      "action": "none",
+      "params": {}
+    },
+    {
+      "case_id": "A04",
+      "http_status": 200,
+      "parse_ok": true,
+      "action": "add_item",
+      "params": {
+        "itemName": "milk"
+      }
+    }
+  ],
+  "limitations": [
+    "This is V2 voice-action evaluation, not V4 need-status or R1–R8 evaluation",
+    "No upstream resolved model version or token usage",
+    "All 44 gold need-status labels are not directly scorable against voice action schema",
+    "Returned add_item is not an order; no downstream handler ran",
+    "Compact results from Replit Agent are not independently stored HTTP response logs",
+    "No per-case reply prose was supplied"
+  ]
+}
