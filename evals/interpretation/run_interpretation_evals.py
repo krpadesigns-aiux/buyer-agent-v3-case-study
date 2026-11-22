@@ -2,7 +2,7 @@
 """Buyer Agent: synthetic local Ollama interpretation evaluation. Never contacts commerce services."""
 import argparse,datetime,hashlib,json,pathlib,urllib.request
 BASE=pathlib.Path(__file__).resolve().parent
-DATA=BASE/"INTERPRETATION_EVAL_CASES_2026-11-22.json"
+DATA=BASE/"cases-2026-11-22.json"
 MODEL="llama3:latest"
 PROMPT="""You are the interpretation layer of a household grocery agent, not the purchasing authority.
 Use ONLY the provided request, household context and product catalog. Do not authorize or execute a purchase.
